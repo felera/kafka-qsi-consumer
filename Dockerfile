@@ -44,7 +44,7 @@ RUN microdnf install curl ca-certificates ${JAVA_PACKAGE} \
 #ENV JAVA_OPTIONS="-Dquarkus.http.host=0.0.0.0 -Djava.util.logging.manager=org.jboss.logmanager.LogManager"
 #COPY target/* /deployments/lib/
 #COPY target/*-runner.jar /deployments/app.jar
-COPY target/*.jar /deployments/app.jar
+COPY target/qsi-kafka-consumer-1.0-RC.jar /deployments/app.jar
 
 EXPOSE 8080
 USER 1001
