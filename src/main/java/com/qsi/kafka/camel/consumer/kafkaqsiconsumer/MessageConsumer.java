@@ -36,10 +36,9 @@ public class MessageConsumer  extends RouteBuilder {
 	public void configure() throws Exception {
 
 		 String kafkaEndPoint = String.format(
-		// 		//"kafka:%s?brokers=%s&groupId=%s&sessionTimeoutMs=%s&maxPollIntervalMs=%s&maxPollRecords=%s",
-		 		"kafka:%s?brokers=localhost:9092&groupId=%s&sessionTimeoutMs=%s&maxPollIntervalMs=%s&maxPollRecords=%s",
-		// 		//topicsList, kafkaBrokers, groupId, sessionTimeOut, maxPollIntervalMs, maxPollRecords);
-		 		topicsList, groupId, sessionTimeOut, maxPollIntervalMs, maxPollRecords);
+			"kafka:%s?brokers=%s&groupId=%s&sessionTimeoutMs=%s&maxPollIntervalMs=%s&maxPollRecords=%s",	
+			topicsList, kafkaBrokers, groupId, sessionTimeOut, maxPollIntervalMs, maxPollRecords);
+		 	
 
 //		String kafkaEndPoint = "kafka://first-topic?brokers=localhost:9092&groupId=qsi-consumer-group-1&maxPollIntervalMs=4000&maxPollRecords=100&sessionTimeoutMs=20000";
 
